@@ -30,37 +30,37 @@
         <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!
         </p>
     </section>
-    <form role="form">
+    <form role="form" action="index.html" method="get">
         <fieldset>
             <legend>Coupon de participation</legend>
             <fieldset>
                 <legend>Nom complet</legend>
-                <div>
+                <p>
                     <label for="Prenom">Prénom </label>
-                    <input type="text" name="Prenom" id="Prenom">
-                </div>
-                <div>
+                    <input type="text" name="Prenom" id="Prenom" required>
+                </p>
+                <p>
                     <label for="Nom">Nom</label>
-                    <input type="text" name="Nom" id="Nom">
-                    <p class="avertissement">Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
-                </div>
+                    <input type="text" name="Nom" id="Nom" required>
+                <p class="avertissement">Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
+                </p>
             </fieldset>
             <!-- Champ à répondre /fieldset -->
-            <div>
+            <p>
                 <label for="Adresse">Adresse</label>
-                <input type="text" name="Adresse" id="Adresse">
-                <p class="avertissement">L'adresse est requise.</p>
-            </div>
-            <div>
+                <input type="text" name="Adresse" id="Adresse" required>
+            <p class="avertissement">L'adresse est requise.</p>
+            </p>
+            <p>
                 <label for="Ville">Ville</label>
-                <input type="text" name="Ville" id="Ville">
-                <p class="avertissement">Attention, le nom de la ville comporte un ou plusieurs caractères
-                    interdits.</p>
-            </div>
-            <div>
+                <input type="text" name="Ville" id="Ville" required>
+            <p class="avertissement">Attention, le nom de la ville comporte un ou plusieurs caractères
+                interdits.</p>
+            </p>
+            <p>
                 <label for="choix-pays">Pays</label>
 
-                <select name="pays" id="choix-pays">
+                <select name="pays" id="choix-pays" required>
                     <option value="">province ou état</option>
                     <option disabled>-- Canada --</option>
                     <option value="AB">Alberta</option>
@@ -129,31 +129,34 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <p class="avertissement">La province ou l'état d'origine doit être précisé.</p>
-            </div>
-            <div>
+            <p class="avertissement">La province ou l'état d'origine doit être précisé.</p>
+            </p>
+            <p>
                 <label for="codepostal">Code postal (X1X 1X1)</label>
-                <input type="text" name="codepostal" id="codepostal" pattern="">
-                <p class="avertissement">Le code postal doit respecter le format X1X 1X1.</p>
-            </div>
-            <div>
+                <input type="text" name="codepostal" id="codepostal" pattern="" required>
+            <p class="avertissement">Le code postal doit respecter le format X1X 1X1.</p>
+            </p>
+            <p>
                 <label for="courriel">Courriel</label>
-                <input type="email" name="courriel" id="courriel">
-                <p class="avertissement">Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
-            </div>
+                <input type="email" name="courriel" id="courriel" required>
+            <p class="avertissement">Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
+            </p>
             <!-- Numéro de téléphone fieldset -->
             <fieldset>
                 <legend>Téléphone (indicatif - numéro)</legend>
-                <div>
+                <p>
                     <label for="Indicatif">Indicatif</label>
-                    <input type="text" name="Indicatif" id="Indicatif">
-                </div>
-                <div>
+                    <input type="text" name="Indicatif" id="Indicatif" required>
+                </p>
+                <p>
+                    -
+                </p>
+                <p>
                     <label for="Numero">Numéro</label>
-                    <input type="text" name="Numero" id="Numero">
-                    <p class="avertissement">Attention, le numéro de téléphone ne doit pas comporter d'espace
-                        ou de trait d'union</p>
-                </div>
+                    <input type="text" name="Numero" id="Numero" required>
+                <p class="avertissement">Attention, le numéro de téléphone ne doit pas comporter d'espace
+                    ou de trait d'union</p>
+                </p>
             </fieldset>
         </fieldset>
         <!-- Seconde partie du formulaire -->
@@ -161,55 +164,69 @@
             <legend>Question du jour</legend>
             <fieldset>
                 <legend>Date à laquelle la question a été posée?</legend>
-                <div>
+                <p>
                     <label for="Jour">Jour</label>
                     <input type="number" name="Jour" id="Jour" required min="1" max="31">
-                </div>
-                <div>
+                </p>
+                <p>
                     <label for="choix-mois">Mois</label>
 
-                <select name="Mois" id="choix-mois">
-                    <option value="">Sélectionner</option>
-                    <option value="01">Janvier</option>
-                    <option value="02">Février</option>
-                    <option value="03">Mars</option>
-                    <option value="04">Avril</option>
-                    <option value="05">Mai</option>
-                    <option value="06">Juin</option>
-                    <option value="07">Juillet</option>
-                    <option value="08">Août</option>
-                    <option value="09">Septembre</option>
-                    <option value="10">Octobre</option>
-                    <option value="11">Novembre</option>
-                    <option value="12">Décembre</option>
-                </select>
-                </div>
-                <div>
+                    <select name="Mois" id="choix-mois" required>
+                        <option value="">Sélectionner</option>
+                        <option value="01">Janvier</option>
+                        <option value="02">Février</option>
+                        <option value="03">Mars</option>
+                        <option value="04">Avril</option>
+                        <option value="05">Mai</option>
+                        <option value="06">Juin</option>
+                        <option value="07">Juillet</option>
+                        <option value="08">Août</option>
+                        <option value="09">Septembre</option>
+                        <option value="10">Octobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Décembre</option>
+                    </select>
+                </p>
+                <p>
                     <label for="Annee">Année</label>
-                    <input type="number" name="Annee" id="Annee" required min ="2020" max="2022">
-                </div>
+                    <input type="number" name="Annee" id="Annee" required min="2020" max="2022">
+                </p>
                 <p class="avertissement">SVP, entrez la date complète.</p>
             </fieldset>
             <fieldset>
                 <legend>Lequel de ces monuments est un mausolée</legend>
                 <ul>
                     <li>
-                        <input type="radio" name="ChateauIf" id="ChateauIf">
-                        <label for="ChateauIf">Le château d'If</label>
+                        <input type="radio" name="ChateauIf" id="ChateauIf" required>
+                        <label for="ChateauIf"><img src="images/chateaudIf-small.jpg">Le château d'If</label>
                     </li>
                     <li>
-                        <input type="radio" name="Luxembourg" id="Luxembourg">
-                        <label for="Luxembourg">Le palais du Luxembourg</label>
+                        <input type="radio" name="Luxembourg" id="Luxembourg" required>
+                        <label for="Luxembourg"><img src="images/palaisluxembourg-small.jpg">Le palais du
+                            Luxembourg</label>
                     </li>
                     <li>
-                        <input type="radio" name="TajMahal" id="TajMahal">
-                        <label for="TajMahal"> <img src="images/tajmahal-small.jpg"Le Taj Mahal</label>
+                        <input type="radio" name="TajMahal" id="TajMahal" required>
+                        <label for="TajMahal"><img src="images/tajmahal-small.jpg">Le Taj Mahal</label>
                     </li>
                 </ul>
+                <p class="avertissement">Veuillez répondre à la question du jour.</p>
             </fieldset>
         </fieldset>
+        <input type="checkbox" name="reglement" id="reglement" required>
+        <label for="reglement">J'ai lu et j'accepte le <a href="pdf/Reglements-Voyage-De-Reve-Au-Menu.pdf">le règlement
+                du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
+        <p class="avertissement">SVP, acceptez le règlement du concours</p>
+        <input type="checkbox" name="documentation" id="documentation" required>
+        <label for="documentation">Oui, j'accepte de recevoir de la documentation de Radio-Canada.</label>
+        <br>
+        <br>
+        <button type="button">Enregistrer</button>
     </form>
 </main>
 <footer role="contentinfo">
-
+    <p class="credits"><strong>© 2021, Éloïse Matteau.</strong>
+        <br>
+        <small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small>
+    </p>
 </footer>
