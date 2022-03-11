@@ -320,18 +320,6 @@ legend{
    padding:0 .5rem;
    font-family:NewsCycle-bold,sans-serif;
 }
-.telephone 
-.rangee{
-   align-items:flex-end;
-}
-.telephone p:nth-of-type(2){
-   text-align:center;
-}
-.tiret{
-   font-family:NewsCycle-bold,sans-serif;
-   padding:.5rem;
-}
-
 .reglement,
 .documentation,
 .soumission{
