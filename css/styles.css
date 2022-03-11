@@ -194,8 +194,10 @@ img{
   /*** entête ***/
   h1 {
    width: 100%;
+   font-family:NewsCycle-bold,sans-serif;
    padding: var(--padding-text);
    margin-bottom: 0;
+
 }
   /*** main ***/
   .conteneur {
@@ -347,6 +349,36 @@ button:hover{
    cursor:pointer;
 }
 
+/** Boutons radio IMAGE **/
+[type=radio]+label{
+   border:1px solid transparent;
+   display:inline-block;
+   padding:.25rem;
+}
+[type=radio]+label 
+   img{
+   filter:grayscale(1);
+}
+[type=radio]:hover+label{
+   cursor:pointer;
+}
+
+[type=radio]:hover+label img,
+[type=radio]:focus+label img{
+   filter:grayscale(0);
+}
+
+[type=radio]:checked+label img{
+   filter:grayscale(0);
+}
+
+[type=radio]:checked+label{
+   border:1px solid black;
+}
+
+input[type=checkbox]{
+   margin-right:1rem;
+}
 /*** footer ***/
 footer{
    padding:5rem
