@@ -86,13 +86,16 @@ img{
 
 /* Charte typographique
    ========================================================================== */
- 
+ @font-face {
+    font-family: NewsCycle-Bold,  ;
+    src: url(/polices/News_Cycle/NewsCycle-Bold.woff2);
+ }
 
 /* Grille
    ========================================================================== */
  /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
 @media (min-width: 600px) {
-   .cntValidation {
+   .ctnValidation{
        margin: 0 auto;
        max-width: 1000px;
        padding: 0;
